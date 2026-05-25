@@ -40,9 +40,23 @@
                         },
                         {
                             "type": "text",
-                            "label": "API key",
-                            "field": "api_key",
-                            "help": "API key",
+                            "label": "FMC Host",
+                            "field": "fmc_host",
+                            "help": "FMC Hostname or IP address.",
+                            "required": true
+                        },
+                        {
+                            "type": "text",
+                            "label": "FMC Username",
+                            "field": "fmc_username",
+                            "help": "FMC Username.",
+                            "required": true
+                        },
+                        {
+                            "type": "text",
+                            "label": "FMC Password",
+                            "field": "fmc_password",
+                            "help": "FMC Password.",
                             "required": true,
                             "encrypted": true
                         }
@@ -109,6 +123,21 @@
                             "help": "Account to use for this input.",
                             "field": "account",
                             "required": true
+                        },
+                        {
+                            "type": "text",
+                            "label": "Domain",
+                            "field": "domain_uuid",
+                            "help": "Domain UUID to monitor.",
+                            "required": true,
+                            "defaultValue": "d709d8d0-9bc6-c700-f777-000000000000"
+                        },
+                        {
+                            "type": "checkbox",
+                            "label": "Verify SSL",
+                            "field": "verify_ssl",
+                            "defaultValue": true,
+                            "help": "Check to verify SSL certificates."
                         }
                     ],
                     "inputHelperModule": "cisco_fmc_health_helper",
