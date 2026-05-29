@@ -125,12 +125,18 @@
                             "required": true
                         },
                         {
-                            "type": "text",
+                            "type": "singleSelect",
                             "label": "Domain",
                             "field": "domain_uuid",
-                            "help": "Domain UUID to monitor.",
+                            "help": "Select an FMC domain to monitor.",
                             "required": true,
-                            "defaultValue": "d709d8d0-9bc6-c700-f777-000000000000"
+                            "options": {
+                                "endpointUrl": "ta_cisco_fmc_domain_handler",
+                                "disableSearch": true,
+                                "dependencies": [
+                                    "account"
+                                ]
+                            }
                         },
                         {
                             "type": "checkbox",
@@ -205,7 +211,7 @@
     "meta": {
         "name": "TA-cisco-fmc",
         "restRoot": "TA-cisco-fmc",
-        "version": "0.0.2",
+        "version": "0.0.13",
         "displayName": "Cisco FMC Add-on",
         "schemaVersion": "0.0.9",
         "supportedThemes": [
